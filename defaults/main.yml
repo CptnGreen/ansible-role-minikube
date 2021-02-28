@@ -1,0 +1,29 @@
+---
+
+# '@Virtualization' group
+minikube_virt_packages:
+
+  # Mandatory Packages:
+  - virt-install
+
+  # Default Packages:
+  - libvirt-daemon-config-network
+  - libvirt-daemon-kvm
+  - qemu-kvm
+  - virt-manager
+  - virt-viewer
+
+  # Optional Packages:
+  - libguestfs-tools
+  - python3-libguestfs
+  - virt-top
+
+minikube_containers_packages:
+  - docker
+  - podman
+
+minikube_vm_packages:
+  - libvirt-daemon-driver-vbox
+  - libvirt-daemon-vbox
+
+minikube_rpm_url: https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm

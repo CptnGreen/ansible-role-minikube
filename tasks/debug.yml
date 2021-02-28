@@ -1,0 +1,9 @@
+---
+
+- name: Query and register CPU support status.
+  shell: egrep '^flags.*(vmx|svm)' /proc/cpuinfo
+  register: cpu_support_status
+
+- name: Print CPU support status.
+  debug:
+    var: cpu_support_status

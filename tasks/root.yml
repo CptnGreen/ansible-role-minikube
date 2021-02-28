@@ -1,0 +1,27 @@
+---
+
+- name: Ensure virtualization software (KVM) is installed.
+  yum:
+    name: "{{ minikube_virt_packages }}"
+    state: present
+
+- name: Ensure libvirtd is enabled and started.
+  service:
+    name: libvirtd
+    enabled: true
+    state: started
+
+- name: Ensure containers' management packages are installed.
+  yum:
+    name: "{{ minikube_containers_packages }}"
+    state: present
+
+- name: Ensure VMs' management packages are installed.
+  yum:
+    name: "{{ minikube_vm_packages }}"
+    state: present
+
+- name: Ensure minikube is installed.
+  yum:
+    name: "{{ minikube_rpm_url }}"
+    state: present
