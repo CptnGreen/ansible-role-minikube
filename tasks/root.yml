@@ -25,3 +25,19 @@
   yum:
     name: "{{ minikube_rpm_url }}"
     state: present
+
+- name: Ensure k8s' repo is present.
+  yum_repository:
+    name: kubernetes
+    description: Kubernetes
+    baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+    enabled: true
+    gpgcheck: true
+    repo_gpgcheck: true
+    gpgkey: https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
+- name: Ensure kubectl is installed.
+  yum:
+    name: kubectl
+    state: present
+
