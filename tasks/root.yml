@@ -11,6 +11,12 @@
     enabled: true
     state: started
 
+- name: Unsure user ak is appended to the libvirt group.
+  user:
+    name: "{{ minikube_user_name }}"
+    append: true
+    groups: libvirt
+
 - name: Ensure containers' management packages are installed.
   yum:
     name: "{{ minikube_containers_packages }}"

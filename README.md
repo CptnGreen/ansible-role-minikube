@@ -21,12 +21,12 @@ None.
 Example Playbook
 ----------------
 
-`ansible all -i <hostname>, -m include_role -a "name=minikube" -u root`
+`ansible all -i <hostname>, -m include_role -a "name=minikube" --ask-become-pass`
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------

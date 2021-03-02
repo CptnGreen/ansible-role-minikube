@@ -1,7 +1,5 @@
 ---
 
-minikube_user_name: ak
-
 # '@Virtualization' group
 minikube_virt_packages:
 
@@ -27,5 +25,3 @@ minikube_containers_packages:
 minikube_vm_packages:
   - libvirt-daemon-driver-vbox
   - libvirt-daemon-vbox
-
-minikube_rpm_url: https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm

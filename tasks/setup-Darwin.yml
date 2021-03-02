@@ -1,0 +1,6 @@
+---
+
+- name: Ensure all the packages are installed.
+  homebrew:
+    name: "{{ minikube_packages }}"
+    state: present
